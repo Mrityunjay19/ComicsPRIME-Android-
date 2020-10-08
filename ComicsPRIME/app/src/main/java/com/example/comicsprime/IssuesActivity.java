@@ -55,6 +55,8 @@ public class IssuesActivity extends AppCompatActivity implements issueRecyclerAd
     //NAVIGATION BAR
     private DrawerLayout drawerIssue;
     NavigationView navigationViewIssue;
+    View headerViewIssue;
+    TextView navWelcomeIssue;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -121,6 +123,10 @@ public class IssuesActivity extends AppCompatActivity implements issueRecyclerAd
                 return true;
             }
         });
+        //NAVIGATION HEADER
+        headerViewIssue = navigationViewIssue.getHeaderView(0);
+        navWelcomeIssue = (TextView) headerViewIssue.findViewById(R.id.welcome_userText);
+        navWelcomeIssue.setText(navWelcomeIssue.getText() + " " + username);
 
 
         //RECYCLER VIEW

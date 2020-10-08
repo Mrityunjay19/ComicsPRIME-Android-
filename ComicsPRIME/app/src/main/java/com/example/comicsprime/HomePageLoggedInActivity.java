@@ -51,6 +51,8 @@ public class HomePageLoggedInActivity extends AppCompatActivity implements title
     //NAVIGATION BAR
     private DrawerLayout drawer;
     NavigationView navigationView;
+    View headerView;
+    TextView navWelcome;
 
     //FIREBASE
 
@@ -131,6 +133,11 @@ public class HomePageLoggedInActivity extends AppCompatActivity implements title
                 return true;
             }
         });
+        //NAVIGATION HEADER
+        headerView = navigationView.getHeaderView(0);
+        navWelcome = (TextView) headerView.findViewById(R.id.welcome_userText);
+        navWelcome.setText(navWelcome.getText() + " " + username);
+
 
 
 

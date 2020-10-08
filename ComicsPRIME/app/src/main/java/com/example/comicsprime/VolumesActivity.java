@@ -55,6 +55,8 @@ public class VolumesActivity extends AppCompatActivity implements volumeRecycler
     //NAVIGATION BAR
     private DrawerLayout drawerVolume;
     NavigationView navigationViewVolume;
+    View headerViewVolume;
+    TextView navWelcomeVolume;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -121,6 +123,11 @@ public class VolumesActivity extends AppCompatActivity implements volumeRecycler
                 return true;
             }
         });
+        //NAVIGATION HEADER
+        headerViewVolume = navigationViewVolume.getHeaderView(0);
+        navWelcomeVolume = (TextView) headerViewVolume.findViewById(R.id.welcome_userText);
+        navWelcomeVolume.setText(navWelcomeVolume.getText() + " " + username);
+
 
 
         //RECYCLER VIEW

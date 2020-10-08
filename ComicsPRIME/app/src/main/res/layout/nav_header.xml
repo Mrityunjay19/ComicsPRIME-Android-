@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:text="Welcome"
+        android:text="Welcome,"
         android:textSize="17sp"
         android:paddingStart="15dp"
         android:textColor="#FFFFFF"/>

@@ -100,17 +100,17 @@ public class SignUpActivity extends Fragment {
                         } else{
                             users.child(user.getUsername()).setValue(user);
 
-                            comics.addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    comics.child(user.getUsername()).child("-1").setValue(0);
-                                }
-
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError error) {
-                                    //NULL
-                                }
-                            });
+//                            comics.addListenerForSingleValueEvent(new ValueEventListener() {
+//                                @Override
+//                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                    comics.child(user.getUsername()).child("-1").setValue(0);
+//                                }
+//
+//                                @Override
+//                                public void onCancelled(@NonNull DatabaseError error) {
+//                                    //NULL
+//                                }
+//                            });
 
                             Toast.makeText(getActivity(), "Registered Successfully !", Toast.LENGTH_LONG).show();
 
